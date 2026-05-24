@@ -1,0 +1,140 @@
+body {
+    background-color: #000;
+    color: #ccc;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status span {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: serif; /* A serif font (like Times New Roman) feels more like a book/journal */
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    background-color: #09d400; /* Darker, quieter dot */
+    border-radius: 50%;
+}
+
+#logic-container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+}
+
+.node-id {
+    font-size: 10px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logic-btn {
+    background: none;
+    color: #ccc;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #1a1a1a;
+    font-size: 15px;
+    border-radius: 4px; /* Slight roundness looks more modern */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logic-btn:hover {
+   border-color: #00ff41;
+    color: #fff;
+    background-color: #0f1a0f;
+    padding-left: 25px; /* Slight slide effect */
+    border-color: #fff;
+    color: #fff;
+    background-color: #111;
+}
+
+
+/* Add this to your #logic-container */
+#logic-container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* THE SMOOTH TRANSITION */
+}
+
+/* Add a hover effect for buttons to make them feel responsive */
+.logic-btn:active {
+    transform: scale(0.98);
+    background-color: #00ff41;
+    color: #000;
+}
+
+/* Optional: Add a scanline effect for that "High-Efficiency UI" look */
+#app::before {
+    content: " ";
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    /*background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));*/
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+.stat {
+    font-size: 10px;
+    color: #666;
+}
+
+
+/* The Analysis Title Glow */
+h1[style*="color: rgb(0, 255, 65)"] {
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    letter-spacing: 2px;
+}
